@@ -1,0 +1,66 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="conversor2.MainPage">
+
+    <StackLayout BackgroundColor="CadetBlue">
+        <Label Text="DOP to USD"
+               FontSize="45"
+               FontAttributes="Bold"
+               Margin="0,20,0,0"
+               HorizontalOptions="CenterAndExpand"/>
+        <Frame VerticalOptions="FillAndExpand"
+               Margin="20"
+               CornerRadius="20">
+
+            <StackLayout VerticalOptions="Center"
+                         Spacing="20">
+                <Image Source="https://www.forbes.com/advisor/wp-content/uploads/2022/12/mxn-usd-forecast-2023.jpg"
+                HeightRequest="300"
+                                 Aspect="AspectFill"/>
+                
+                <Label Text="(DOP) to (USD)"
+                       FontAttributes="Italic"
+                       FontSize="Caption"
+                       HorizontalOptions="Center"/>
+                
+                <Frame
+                    CornerRadius="15"
+                    BackgroundColor="LightGray">
+                    <Entry Keyboard="Numeric"
+                           Placeholder="DOP"
+                           TextColor="Black"
+                           PlaceholderColor="Black"
+                           x:Name="txtdop"/>
+                </Frame>
+               
+                <Button Text="Convert"
+                        FontAttributes="Bold"
+                        FontSize="Medium"
+                        TextTransform="None"
+                        BackgroundColor="#FEA3AA"
+                        CornerRadius="10"
+                        x:Name="btncalculate"
+                        Clicked="btncalculate_Clicked"/>
+                <StackLayout Orientation="Horizontal">
+                    <Label Text="USD: "
+                           FontSize="Medium"
+                           FontAttributes="Bold"/>
+                    <Label Text="0"
+                           FontSize="Medium"
+                           FontAttributes="Bold"
+                           x:Name="lblconversion"/>
+                </StackLayout>
+                            
+                   
+                 
+                
+            </StackLayout>
+
+        </Frame>
+
+    </StackLayout>
+    
+
+</ContentPage>
+
